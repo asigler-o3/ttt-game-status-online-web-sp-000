@@ -18,15 +18,15 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |single_win_combo|
-    win_index_1 = single_win_combo[0]
-    win_index_2 = single_win_combo[1]
-    win_index_3 = single_win_combo[2]
+    index_1 = single_win_combo[0]
+    index_2 = single_win_combo[1]
+    index_3 = single_win_combo[2]
 
     index_1 = board[index_1]
     index_2 = board[index_2]
     index_3 = board[index_3]
 
-    if index_1 == index_2 && index_2 == index_3 && position_taken?(board, win_index_1)
+    if index_1 == index_2 && index_2 == index_3 && position_taken?(board, index)
       return single_win_combo
     end
   end
